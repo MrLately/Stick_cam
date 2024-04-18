@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PiCam and Servo Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- This is the meta tag I added -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="cameraContainer">
+        <img src="{{ url_for('video_feed') }}" alt="Camera Stream" id="cameraFeed">
+    </div>
+    <div id="joystickContainer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/nipplejs"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

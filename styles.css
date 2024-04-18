@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Change from center to flex-start */
+    align-items: center;
+    height: 100vh;
+    background-color: #6c7899;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#cameraContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 66%; /* 2/3 of the viewport height */
+}
+
+#cameraFeed {
+    width: 90%;
+    max-width: 640px;
+    margin: 10px 0;
+    border: 5px solid black;
+    max-height: 100%;
+}
+
+#joystickContainer {
+    width: 300px;
+    height: 300px;
+    /* margin-top: 30px; Removed as it's not taking effect */
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) { 
+    #cameraFeed {
+        width: 95%;
+    }
+
+    #joystickContainer {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 100px;
+    }
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 769px) {
+    #cameraFeed {
+        width: 95%;
+    }
+
+    #joystickContainer {
+        width: 250px;
+        height: 250px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
